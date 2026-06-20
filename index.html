@@ -1,103 +1,273 @@
-<div style="max-width: 600px; margin: 0 auto; background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clarity for life's hard conversations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-page: #f7f5f0;
+    --bg-card: #fdfbf7;
+    --bg-surface: #eae4da;
+    --bg-sage: #dde6ea;
+    --sage: #5e7d8c;
+    --sage-deep: #3c5a68;
+    --clay: #c89b6a;
+    --text-primary: #26302f;
+    --text-secondary: #62655f;
+    --text-tertiary: #939089;
+    --border: rgba(45,55,60,0.13);
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  .wrap-narrow { max-width: 620px; margin: 0 auto; padding: 0 24px; }
+  h1 { font-family: var(--serif); font-weight: 400; line-height: 1.12; letter-spacing: -0.015em; font-size: 44px; }
+  h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; font-size: 28px; }
 
-  <div style="padding: 2.5rem 2rem 2rem; text-align: center; background: var(--color-background-secondary);">
-    <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 14px; letter-spacing: 0.5px;">1:1 clarity conversations · online</p>
-    <h1 style="font-size: 27px; font-weight: 500; margin: 0 0 14px; line-height: 1.3;">Clarity for life's hard conversations</h1>
-    <p style="font-size: 16px; color: var(--color-text-secondary); margin: 0 auto 22px; max-width: 440px; line-height: 1.6;">A calm, confidential space to understand yourself, your relationships, and your next step.</p>
-    <a href="#book" style="display: inline-block; background: var(--color-text-primary); color: var(--color-background-primary); padding: 12px 28px; border-radius: var(--border-radius-md); font-size: 15px; font-weight: 500; text-decoration: none;">Book a session</a>
-  </div>
+  .hero {
+    background: var(--bg-sage);
+    text-align: center;
+    padding: 6rem 24px 5.5rem;
+  }
+  .eyebrow {
+    font-size: 12px; color: var(--sage-deep);
+    margin-bottom: 22px; letter-spacing: 1.8px;
+    text-transform: uppercase; font-weight: 500;
+  }
+  .hero h1 { margin: 0 auto 22px; max-width: 640px; }
+  .hero .sub {
+    font-size: 19px; color: var(--text-secondary);
+    margin: 0 auto 34px; max-width: 480px;
+  }
+  .btn {
+    display: inline-block; background: var(--sage-deep); color: #fdfbf7;
+    padding: 15px 36px; border-radius: 100px;
+    font-size: 16px; font-weight: 500; text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn:hover { background: #2e4753; }
 
-  <div style="padding: 2rem;">
-    <h2 style="font-size: 18px; font-weight: 500; margin: 0 0 12px;">What this is</h2>
-    <p style="font-size: 15px; color: var(--color-text-secondary); line-height: 1.7; margin: 0;">A focused, confidential space to talk through what's on your mind, relationships, what's weighing on you, the things that are hard to say out loud. You leave with more clarity and a calmer head, not a diagnosis or a prescription.</p>
-  </div>
+  .band { padding: 5rem 0; }
+  .band.surface { background: var(--bg-surface); }
+  .band h2 { margin-bottom: 18px; }
+  .band .lead {
+    font-size: 18px; color: var(--text-secondary); line-height: 1.75;
+    max-width: 620px;
+  }
+  .band.center { text-align: center; }
+  .band.center .lead { margin: 0 auto; }
+  .band.center h2 { margin-bottom: 36px; }
 
-  <div style="padding: 0 2rem 2rem;">
-    <h2 style="font-size: 18px; font-weight: 500; margin: 0 0 16px;">Who it's for</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px;">
-      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 16px;">
-        <i class="ti ti-mountain" style="font-size: 22px; color: var(--color-text-secondary);" aria-hidden="true"></i>
-        <p style="font-size: 14px; font-weight: 500; margin: 8px 0 4px;">Feeling stuck</p>
-        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">Not sure what to do next? Talk it out.</p>
-      </div>
-      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 16px;">
-        <i class="ti ti-heart" style="font-size: 22px; color: var(--color-text-secondary);" aria-hidden="true"></i>
-        <p style="font-size: 14px; font-weight: 500; margin: 8px 0 4px;">Relationships</p>
-        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">Untangle what you're feeling and what you want.</p>
-      </div>
-      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 16px;">
-        <i class="ti ti-message-circle" style="font-size: 22px; color: var(--color-text-secondary);" aria-hidden="true"></i>
-        <p style="font-size: 14px; font-weight: 500; margin: 8px 0 4px;">Feeling understood</p>
-        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">Be heard, properly, by someone who listens deeply.</p>
+  .grid3 {
+    display: grid; gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 8px;
+  }
+  .card-soft {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 26px; text-align: left;
+  }
+  .card-soft .icon {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--bg-sage); display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px; color: var(--sage-deep);
+  }
+  .card-soft .icon svg { width: 22px; height: 22px; }
+  .card-soft .title { font-size: 17px; font-weight: 500; margin-bottom: 6px; }
+  .card-soft .desc { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
+
+  .steps {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 8px;
+  }
+  .step { text-align: left; }
+  .step .num {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--sage); color: #fdfbf7;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; font-weight: 500; font-family: var(--serif);
+    margin-bottom: 14px;
+  }
+  .step .stitle { font-size: 17px; font-weight: 500; margin-bottom: 5px; }
+  .step .sdesc { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
+
+  .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 8px; text-align: left; }
+  .quote {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 28px 30px;
+  }
+  .quote .mark {
+    font-family: var(--serif); font-size: 50px; line-height: 1;
+    color: var(--clay); display: block; height: 26px; margin-bottom: 6px;
+  }
+  .quote p.text {
+    font-family: var(--serif); font-size: 19px; line-height: 1.5;
+    margin-bottom: 14px; color: var(--text-primary); font-style: italic;
+  }
+  .quote .who { font-size: 13px; color: var(--text-tertiary); letter-spacing: 0.3px; }
+
+  .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 8px; text-align: left; }
+  .price-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 28px;
+  }
+  .price-card.featured { border: 1.5px solid var(--sage); background: var(--bg-sage); }
+  .price-card .badge {
+    display: inline-block; background: var(--clay); color: #fdfbf7;
+    font-size: 11px; padding: 4px 12px; border-radius: 100px;
+    margin-bottom: 12px; letter-spacing: 0.5px;
+  }
+  .price-card .name { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+  .price-card .price { font-family: var(--serif); font-size: 30px; font-weight: 400; margin-bottom: 10px; }
+  .price-card .note { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+  .cta-band { background: var(--bg-sage); text-align: center; padding: 5.5rem 24px; }
+  .cta-band h2 { margin-bottom: 14px; }
+  .cta-band p { font-size: 17px; color: var(--text-secondary); line-height: 1.65; margin: 0 auto 6px; max-width: 480px; }
+  .cta-band p.last { margin-bottom: 28px; }
+
+  .footer { padding: 2.5rem 24px; text-align: center; }
+  .footer p { font-size: 12.5px; color: var(--text-tertiary); line-height: 1.7; max-width: 620px; margin: 0 auto; }
+
+  @media (max-width: 720px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 23px; }
+    .hero { padding: 4rem 22px 3.5rem; }
+    .hero .sub { font-size: 17px; }
+    .band { padding: 3.25rem 0; }
+    .band.center h2 { margin-bottom: 26px; }
+    .grid3, .steps, .quotes, .prices { grid-template-columns: 1fr; gap: 14px; }
+    .cta-band { padding: 3.75rem 22px; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <p class="eyebrow">1:1 clarity conversations &middot; online</p>
+    <h1>Clarity for life's hard conversations</h1>
+    <p class="sub">A calm, confidential space to understand yourself, your relationships, and your next step.</p>
+    <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20a%20clarity%20session.%20Could%20you%20share%20the%20available%20times%3F" class="btn" target="_blank" rel="noopener">Message to book</a>
+  </section>
+
+  <section class="band">
+    <div class="wrap-narrow">
+      <h2>What this is</h2>
+      <p class="lead">A focused, confidential space to talk through what's on your mind, relationships, what's weighing on you, the things that are hard to say out loud. You leave with more clarity and a calmer head, not a diagnosis or a prescription.</p>
+    </div>
+  </section>
+
+  <section class="band surface center">
+    <div class="wrap">
+      <h2>Who it's for</h2>
+      <div class="grid3">
+        <div class="card-soft">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18L14 4l-4 8-3-3-4 11z"/></svg></div>
+          <p class="title">Feeling stuck</p>
+          <p class="desc">Not sure what to do next? Talk it out.</p>
+        </div>
+        <div class="card-soft">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.3 3-5.5A4.5 4.5 0 0 0 12 5 4.5 4.5 0 0 0 2 8.5c0 2.2 1.5 4 3 5.5l7 7z"/></svg></div>
+          <p class="title">Relationships</p>
+          <p class="desc">Untangle what you're feeling and what you want.</p>
+        </div>
+        <div class="card-soft">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.5-.8L3 21l1.9-5.5A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></div>
+          <p class="title">Feeling understood</p>
+          <p class="desc">Be heard, properly, by someone who listens deeply.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div style="padding: 0 2rem 2rem;">
-    <h2 style="font-size: 18px; font-weight: 500; margin: 0 0 16px;">How it works</h2>
-    <div style="display: flex; flex-direction: column; gap: 14px;">
-      <div style="display: flex; gap: 14px; align-items: flex-start;">
-        <div style="min-width: 26px; height: 26px; border-radius: 50%; background: var(--color-background-info); color: var(--color-text-info); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500;">1</div>
-        <div><p style="font-size: 15px; font-weight: 500; margin: 0 0 2px;">Reach out</p><p style="font-size: 14px; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">Send a short note about what you'd like to talk through.</p></div>
-      </div>
-      <div style="display: flex; gap: 14px; align-items: flex-start;">
-        <div style="min-width: 26px; height: 26px; border-radius: 50%; background: var(--color-background-info); color: var(--color-text-info); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500;">2</div>
-        <div><p style="font-size: 15px; font-weight: 500; margin: 0 0 2px;">Pick a time</p><p style="font-size: 14px; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">Sessions run [60 minutes], online 1-on-1.</p></div>
-      </div>
-      <div style="display: flex; gap: 14px; align-items: flex-start;">
-        <div style="min-width: 26px; height: 26px; border-radius: 50%; background: var(--color-background-info); color: var(--color-text-info); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500;">3</div>
-        <div><p style="font-size: 15px; font-weight: 500; margin: 0 0 2px;">Talk it through</p><p style="font-size: 14px; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">A calm, judgment-free conversation. Everything stays private.</p></div>
+  <section class="band center">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <p class="stitle">Reach out</p>
+          <p class="sdesc">Send a short message about what you'd like to talk through.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <p class="stitle">Pick a time</p>
+          <p class="sdesc">Sessions run [60 minutes], online 1-on-1.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <p class="stitle">Talk it through</p>
+          <p class="sdesc">A calm, judgment-free conversation. Everything stays private.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div style="padding: 0 2rem 2rem;">
-    <h2 style="font-size: 18px; font-weight: 500; margin: 0 0 16px;">What people say</h2>
-    <div style="display: flex; flex-direction: column; gap: 12px;">
-      <div style="border-left: 2px solid var(--color-border-info); background: var(--color-background-secondary); border-radius: 0; padding: 16px 18px;">
-        <p style="font-size: 15px; line-height: 1.6; margin: 0 0 8px; font-style: italic; color: var(--color-text-primary);">"I came in carrying so much and left feeling lighter than I had in months. I felt genuinely heard, no judgment at all."</p>
-        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0;">— Client, single session</p>
-      </div>
-      <div style="border-left: 2px solid var(--color-border-info); background: var(--color-background-secondary); border-radius: 0; padding: 16px 18px;">
-        <p style="font-size: 15px; line-height: 1.6; margin: 0 0 8px; font-style: italic; color: var(--color-text-primary);">"It's rare to feel this understood by someone. I left with a much clearer head and a sense of relief."</p>
-        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0;">— Client, single session</p>
-      </div>
-    </div>
-  </div>
-
-  <div style="padding: 0 2rem 2rem;">
-    <h2 style="font-size: 18px; font-weight: 500; margin: 0 0 16px;">Sessions & pricing</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px;">
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 18px;">
-        <p style="font-size: 14px; font-weight: 500; margin: 0 0 6px;">Single session</p>
-        <p style="font-size: 22px; font-weight: 500; margin: 0 0 8px;">[₹2,000]</p>
-        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">One 60-min conversation, online.</p>
-      </div>
-      <div style="border: 2px solid var(--color-border-info); border-radius: var(--border-radius-lg); padding: 18px;">
-        <span style="display: inline-block; background: var(--color-background-info); color: var(--color-text-info); font-size: 11px; padding: 3px 10px; border-radius: var(--border-radius-md); margin-bottom: 8px;">Best value</span>
-        <p style="font-size: 14px; font-weight: 500; margin: 0 0 6px;">3-session pack</p>
-        <p style="font-size: 22px; font-weight: 500; margin: 0 0 8px;">[₹5,000]</p>
-        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">Real clarity rarely lands in one talk.</p>
-      </div>
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 18px;">
-        <p style="font-size: 14px; font-weight: 500; margin: 0 0 6px;">Couples session</p>
-        <p style="font-size: 22px; font-weight: 500; margin: 0 0 8px;">[₹3,000]</p>
-        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">One 90-min session for two, online.</p>
+  <section class="band surface center">
+    <div class="wrap">
+      <h2>What people say</h2>
+      <div class="quotes">
+        <div class="quote">
+          <span class="mark">&ldquo;</span>
+          <p class="text">I came in carrying so much and left feeling lighter than I had in months. I felt genuinely heard, no judgment at all.</p>
+          <p class="who">Client, single session</p>
+        </div>
+        <div class="quote">
+          <span class="mark">&ldquo;</span>
+          <p class="text">It's rare to feel this understood by someone. I left with a much clearer head and a sense of relief.</p>
+          <p class="who">Client, single session</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="book" style="padding: 0 2rem 2rem;">
-    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 22px; text-align: center;">
-      <h2 style="font-size: 18px; font-weight: 500; margin: 0 0 8px;">Ready to talk?</h2>
-      <p style="font-size: 14px; color: var(--color-text-secondary); margin: 0 0 6px; line-height: 1.6;">Whatever's on your mind, there's room for it here.</p>
-      <p style="font-size: 14px; color: var(--color-text-secondary); margin: 0 0 16px; line-height: 1.6;">Pick a time that works. No pressure, no commitment beyond the session.</p>
-      <a href="#" style="display: inline-block; background: var(--color-text-primary); color: var(--color-background-primary); padding: 12px 28px; border-radius: var(--border-radius-md); font-size: 15px; font-weight: 500; text-decoration: none;">[Book via Cal.com / Calendly]</a>
+  <section class="band center">
+    <div class="wrap">
+      <h2>Sessions &amp; pricing</h2>
+      <div class="prices">
+        <div class="price-card">
+          <p class="name">Single session</p>
+          <p class="price">[&#8377;2,000]</p>
+          <p class="note">One 60-min conversation, online.</p>
+        </div>
+        <div class="price-card featured">
+          <span class="badge">Best value</span>
+          <p class="name">3-session pack</p>
+          <p class="price">[&#8377;5,000]</p>
+          <p class="note">Real clarity rarely lands in one talk.</p>
+        </div>
+        <div class="price-card">
+          <p class="name">Couples session</p>
+          <p class="price">[&#8377;3,000]</p>
+          <p class="note">One 90-min session for two, online.</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div style="padding: 1rem 2rem 2rem; border-top: 0.5px solid var(--color-border-tertiary);">
-    <p style="font-size: 12px; color: var(--color-text-tertiary); margin: 0; line-height: 1.6;">These sessions offer coaching and conversational support. They are not psychotherapy, counselling, medical, or mental-health treatment, and are not a substitute for care from a licensed professional. If you are in crisis or need clinical help, please reach out to a qualified mental-health professional or a helpline.</p>
-  </div>
+  <section class="cta-band">
+    <h2>Ready to talk?</h2>
+    <p>Whatever's on your mind, there's room for it here.</p>
+    <p class="last">Send a quick message and we'll find a time that works. No pressure, no commitment beyond the session.</p>
+    <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20a%20clarity%20session.%20Could%20you%20share%20the%20available%20times%3F" class="btn" target="_blank" rel="noopener">Message on WhatsApp</a>
+  </section>
 
-</div>
+  <footer class="footer">
+    <p>These sessions offer coaching and conversational support. They are not psychotherapy, counselling, medical, or mental-health treatment, and are not a substitute for care from a licensed professional. If you are in crisis or need clinical help, please reach out to a qualified mental-health professional or a helpline.</p>
+  </footer>
+
+</body>
+</html>
