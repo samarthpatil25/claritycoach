@@ -9,261 +9,248 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-page: #f7f5f0;
-    --bg-card: #fdfbf7;
-    --bg-surface: #eae4da;
-    --bg-sage: #dde6ea;
-    --sage: #5e7d8c;
-    --sage-deep: #3c5a68;
-    --clay: #c89b6a;
-    --text-primary: #26302f;
-    --text-secondary: #62655f;
-    --text-tertiary: #939089;
-    --border: rgba(45,55,60,0.13);
+        --bg-page: #f0f1f3;
+    --bg-card: #ffffff;
+    --bg-surface: #e4e7ec;
+    --bg-blue: #dfe3ea;
+    --blue: #3a4f66;
+    --blue-deep: #1f3042;
+    --clay: #c2925a;
+    --text-primary: #17212e;
+    --text-secondary: #55606e;
+    --text-tertiary: #8b94a0;
+    --border: rgba(25,35,50,0.14);
     --radius-md: 12px;
     --radius-lg: 18px;
     --serif: 'Fraunces', Georgia, serif;
     --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: var(--sans);
-    background: var(--bg-page);
-    color: var(--text-primary);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--bg-page); color: var(--text-primary); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
   .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-  .wrap-narrow { max-width: 620px; margin: 0 auto; padding: 0 24px; }
+  .wrap-narrow { max-width: 680px; margin: 0 auto; padding: 0 24px; }
   h1 { font-family: var(--serif); font-weight: 400; line-height: 1.12; letter-spacing: -0.015em; font-size: 44px; }
   h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; font-size: 28px; }
+  h3 { font-family: var(--serif); font-weight: 400; font-size: 21px; }
 
-  .hero {
-    background: var(--bg-sage);
-    text-align: center;
-    padding: 6rem 24px 5.5rem;
-  }
-  .eyebrow {
-    font-size: 12px; color: var(--sage-deep);
-    margin-bottom: 22px; letter-spacing: 1.8px;
-    text-transform: uppercase; font-weight: 500;
-  }
-  .hero h1 { margin: 0 auto 22px; max-width: 640px; }
-  .hero .sub {
-    font-size: 19px; color: var(--text-secondary);
-    margin: 0 auto 34px; max-width: 480px;
-  }
-  .btn {
-    display: inline-block; background: var(--sage-deep); color: #fdfbf7;
-    padding: 15px 36px; border-radius: 100px;
-    font-size: 16px; font-weight: 500; text-decoration: none;
-    transition: background 0.2s;
-  }
-  .btn:hover { background: #2e4753; }
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 50; background: rgba(247,245,240,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 1000px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-family: var(--serif); font-size: 19px; color: var(--text-primary); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-size: 15px; color: var(--text-secondary); text-decoration: none; transition: color .15s; }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-links a.active { color: var(--text-primary); font-weight: 500; }
+  .nav-cta { background: var(--blue-deep); color: #fdfbf7 !important; padding: 9px 20px; border-radius: 100px; font-size: 14px; }
+  .nav-cta:hover { background: #152230; }
+  .menu-btn { display: none; background: none; border: none; font-size: 24px; color: var(--text-primary); cursor: pointer; line-height: 1; }
 
-  .band { padding: 5rem 0; }
+  .btn { display: inline-block; background: var(--blue-deep); color: #fdfbf7; padding: 15px 36px; border-radius: 100px; font-size: 16px; font-weight: 500; text-decoration: none; transition: background .2s; }
+  .btn:hover { background: #152230; }
+  .btn-ghost { background: transparent; color: var(--blue-deep); border: 1.5px solid var(--blue); }
+  .btn-ghost:hover { background: var(--bg-blue); }
+
+  .hero { background: var(--bg-blue); text-align: center; padding: 5.5rem 24px 5rem; }
+  .eyebrow { font-size: 12px; color: var(--blue-deep); margin-bottom: 20px; letter-spacing: 1.8px; text-transform: uppercase; font-weight: 500; }
+  .hero h1 { margin: 0 auto 20px; max-width: 640px; }
+  .hero .sub { font-size: 19px; color: var(--text-secondary); margin: 0 auto 32px; max-width: 480px; }
+  .page-head { background: var(--bg-blue); text-align: center; padding: 4rem 24px 3.5rem; }
+  .page-head h1 { font-size: 38px; margin-bottom: 12px; }
+  .page-head p { font-size: 17px; color: var(--text-secondary); max-width: 520px; margin: 0 auto; }
+
+  .band { padding: 4.5rem 0; }
   .band.surface { background: var(--bg-surface); }
   .band h2 { margin-bottom: 18px; }
-  .band .lead {
-    font-size: 18px; color: var(--text-secondary); line-height: 1.75;
-    max-width: 620px;
-  }
+  .band .lead { font-size: 18px; color: var(--text-secondary); line-height: 1.8; max-width: 640px; }
   .band.center { text-align: center; }
   .band.center .lead { margin: 0 auto; }
   .band.center h2 { margin-bottom: 36px; }
 
-  .grid3 {
-    display: grid; gap: 18px;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 8px;
-  }
-  .card-soft {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: var(--radius-md); padding: 26px; text-align: left;
-  }
-  .card-soft .icon {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: var(--bg-sage); display: flex; align-items: center; justify-content: center;
-    margin-bottom: 16px; color: var(--sage-deep);
-  }
+  .grid3 { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); margin-top: 8px; }
+  .card-soft { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 26px; text-align: left; }
+  .card-soft .icon { width: 44px; height: 44px; border-radius: 50%; background: var(--bg-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--blue-deep); }
   .card-soft .icon svg { width: 22px; height: 22px; }
   .card-soft .title { font-size: 17px; font-weight: 500; margin-bottom: 6px; }
   .card-soft .desc { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
 
-  .steps {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 8px;
-  }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 8px; }
   .step { text-align: left; }
-  .step .num {
-    width: 38px; height: 38px; border-radius: 50%;
-    background: var(--sage); color: #fdfbf7;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 17px; font-weight: 500; font-family: var(--serif);
-    margin-bottom: 14px;
-  }
+  .step .num { width: 38px; height: 38px; border-radius: 50%; background: var(--blue); color: #fdfbf7; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 500; font-family: var(--serif); margin-bottom: 14px; }
   .step .stitle { font-size: 17px; font-weight: 500; margin-bottom: 5px; }
   .step .sdesc { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
 
   .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 8px; text-align: left; }
-  .quote {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: var(--radius-md); padding: 28px 30px;
-  }
-  .quote .mark {
-    font-family: var(--serif); font-size: 50px; line-height: 1;
-    color: var(--clay); display: block; height: 26px; margin-bottom: 6px;
-  }
-  .quote p.text {
-    font-family: var(--serif); font-size: 19px; line-height: 1.5;
-    margin-bottom: 14px; color: var(--text-primary); font-style: italic;
-  }
+  .quote { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 28px 30px; }
+  .quote .mark { font-family: var(--serif); font-size: 50px; line-height: 1; color: var(--clay); display: block; height: 26px; margin-bottom: 6px; }
+  .quote p.text { font-family: var(--serif); font-size: 19px; line-height: 1.5; margin-bottom: 14px; color: var(--text-primary); font-style: italic; }
   .quote .who { font-size: 13px; color: var(--text-tertiary); letter-spacing: 0.3px; }
 
-  .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 8px; text-align: left; }
-  .prices-2 { grid-template-columns: repeat(2, 1fr); max-width: 560px; margin-left: auto; margin-right: auto; }
-  .price-card {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: var(--radius-md); padding: 28px;
-  }
-  .price-card.featured { border: 1.5px solid var(--sage); background: var(--bg-sage); }
-  .price-card .badge {
-    display: inline-block; background: var(--clay); color: #fdfbf7;
-    font-size: 11px; padding: 4px 12px; border-radius: 100px;
-    margin-bottom: 12px; letter-spacing: 0.5px;
-  }
+  .prices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 8px; text-align: left; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .price-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 30px; }
+  .price-card.featured { border: 1.5px solid var(--blue); background: var(--bg-blue); }
+  .price-card .badge { display: inline-block; background: var(--clay); color: #fdfbf7; font-size: 11px; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; letter-spacing: 0.5px; }
   .price-card .name { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
-  .price-card .price { font-family: var(--serif); font-size: 30px; font-weight: 400; margin-bottom: 10px; }
+  .price-card .price { font-family: var(--serif); font-size: 32px; font-weight: 400; margin-bottom: 10px; }
   .price-card .note { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
 
-  .cta-band { background: var(--bg-sage); text-align: center; padding: 5.5rem 24px; }
+  .cta-band { background: var(--bg-blue); text-align: center; padding: 5rem 24px; }
   .cta-band h2 { margin-bottom: 14px; }
   .cta-band p { font-size: 17px; color: var(--text-secondary); line-height: 1.65; margin: 0 auto 6px; max-width: 480px; }
   .cta-band p.last { margin-bottom: 28px; }
 
-  .footer { padding: 2.5rem 24px; text-align: center; }
-  .footer p { font-size: 12.5px; color: var(--text-tertiary); line-height: 1.7; max-width: 620px; margin: 0 auto; }
+  .prose { max-width: 680px; margin: 0 auto; }
+  .prose p { font-size: 17px; color: var(--text-secondary); line-height: 1.85; margin-bottom: 20px; }
+  .prose p strong { color: var(--text-primary); font-weight: 500; }
+
+  .footer { padding: 2.5rem 24px; text-align: center; border-top: 1px solid var(--border); }
+  .footer .disc { font-size: 12.5px; color: var(--text-tertiary); line-height: 1.7; max-width: 640px; margin: 0 auto 14px; }
+  .footer .flinks { font-size: 14px; color: var(--text-secondary); }
+  .footer .flinks a { color: var(--text-secondary); text-decoration: none; margin: 0 10px; }
+  .footer .flinks a:hover { color: var(--text-primary); }
 
   @media (max-width: 720px) {
-    h1 { font-size: 32px; }
-    h2 { font-size: 23px; }
-    .hero { padding: 4rem 22px 3.5rem; }
-    .hero .sub { font-size: 17px; }
+    h1 { font-size: 32px; } h2 { font-size: 23px; }
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-page); flex-direction: column; gap: 0; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 24px; width: 100%; }
+    .nav-links a.nav-cta { margin: 8px 24px; text-align: center; }
+    .menu-btn { display: block; }
+    .hero { padding: 4rem 22px 3.5rem; } .hero .sub { font-size: 17px; }
     .band { padding: 3.25rem 0; }
-    .band.center h2 { margin-bottom: 26px; }
     .grid3, .steps, .quotes, .prices { grid-template-columns: 1fr; gap: 14px; }
     .cta-band { padding: 3.75rem 22px; }
   }
+
+  .note-box { max-width: 640px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--clay); border-radius: var(--radius-md); padding: 32px 34px; text-align: left; }
+  .note-box p { font-size: 18px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 16px; }
+  .note-box p:last-child { margin-bottom: 0; }
+  .note-box p strong { color: var(--text-primary); font-weight: 500; }
+  .feature-list { max-width: 640px; margin: 8px auto 0; text-align: left; list-style: none; }
+  .feature-list li { display: flex; gap: 14px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .feature-list li:last-child { border-bottom: none; }
+  .feature-list .ic { color: var(--blue-deep); flex-shrink: 0; margin-top: 2px; }
+  .feature-list .ic svg { width: 20px; height: 20px; }
+  .feature-list .ft { font-size: 16px; color: var(--text-primary); }
+  .feature-list .ft span { display: block; font-size: 14px; color: var(--text-secondary); margin-top: 3px; }
+  .fit-list { max-width: 640px; margin: 0 auto; text-align: left; }
+  .fit-list p { font-size: 17px; color: var(--text-secondary); line-height: 1.7; padding: 12px 0 12px 30px; position: relative; }
+  .fit-list p::before { content: "\2014"; position: absolute; left: 0; color: var(--clay); }
+  .fit-not { max-width: 640px; margin: 24px auto 0; font-size: 16px; color: var(--text-tertiary); font-style: italic; text-align: left; }
+  .faq { max-width: 680px; margin: 0 auto; text-align: left; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+  .faq-item:first-child { border-top: 1px solid var(--border); }
+  .faq-q { font-family: var(--serif); font-size: 19px; color: var(--text-primary); margin-bottom: 8px; }
+  .faq-a { font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
+
+  .quotes-3 { grid-template-columns: repeat(3, 1fr); }
+  .quote { display: flex; flex-direction: column; }
+  .quote blockquote.text { margin: 0 0 18px; }
+  .quote .who { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+  .quote .avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--blue-deep); color: #fdfbf7; display: inline-flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 15px; flex-shrink: 0; }
+  .review-note { text-align: center; font-size: 13px; color: var(--text-tertiary); margin-top: 28px; font-style: italic; }
+  @media (max-width: 720px) { .quotes-3 { grid-template-columns: 1fr; } }
 </style>
 </head>
-<body>
+<body>  <nav class="nav"><div class="nav-inner">
+    <a href="index.html" class="brand">Moreway</a>
+    <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')">&#9776;</button>
+    <div class="nav-links" id="navlinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20a%20discovery%20call.%20Here%27s%20a%20bit%20about%20what%20I%27m%20working%20through%3A" class="nav-cta" target="_blank" rel="noopener">Book a Discovery Call</a>
+    </div>
+  </div></nav>
 
   <section class="hero">
     <p class="eyebrow">1:1 clarity conversations &middot; online</p>
-    <h1>Clarity for life's hard conversations</h1>
-    <p class="sub">A calm, confidential space to understand yourself, your relationships, and your next step.</p>
-    <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20a%20clarity%20session.%20Could%20you%20share%20the%20available%20times%3F" class="btn" target="_blank" rel="noopener">Message to book</a>
+    <h1>You already know what's wrong. You just haven't said it out loud to someone who really listens.</h1>
+    <p class="sub">One-on-one conversations for people who are tired of circling the same problem. Start with a free discovery call.</p>
+    <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20a%20discovery%20call.%20Here%27s%20a%20bit%20about%20what%20I%27m%20working%20through%3A" class="btn" target="_blank" rel="noopener">Book a Discovery Call</a>
   </section>
 
-  <section class="band">
-    <div class="wrap-narrow">
-      <h2>What this is</h2>
-      <p class="lead">A focused, confidential space to talk through what's on your mind, relationships, what's weighing on you, the things that are hard to say out loud. You leave with more clarity and a calmer head, not a diagnosis or a prescription.</p>
+  <section class="band center"><div class="wrap-narrow">
+    <h2>Confusion isn't your personality. It's an unsolved root cause.</h2>
+    <div class="note-box" style="margin-top:32px;">
+      <p>You're not struggling because you can't find solutions.</p>
+      <p>You're struggling because you haven't yet <strong>seen the problem in its real form</strong>.</p>
+      <p>And when the problem isn't clear, no solution will ever feel right.</p>
     </div>
-  </section>
+  </div></section>
 
-  <section class="band surface center">
-    <div class="wrap">
-      <h2>Who it's for</h2>
-      <div class="grid3">
-        <div class="card-soft">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18L14 4l-4 8-3-3-4 11z"/></svg></div>
-          <p class="title">Feeling stuck</p>
-          <p class="desc">Not sure what to do next? Talk it out.</p>
-        </div>
-        <div class="card-soft">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.3 3-5.5A4.5 4.5 0 0 0 12 5 4.5 4.5 0 0 0 2 8.5c0 2.2 1.5 4 3 5.5l7 7z"/></svg></div>
-          <p class="title">Relationships</p>
-          <p class="desc">Untangle what you're feeling and what you want.</p>
-        </div>
-        <div class="card-soft">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.5-.8L3 21l1.9-5.5A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></div>
-          <p class="title">Feeling understood</p>
-          <p class="desc">Be heard, properly, by someone who listens deeply.</p>
-        </div>
-      </div>
+  <section class="band surface center"><div class="wrap-narrow">
+    <h2>How it works</h2>
+    <p class="lead" style="margin-bottom:36px;">A simple, direct process, built around you, not a script applied to you.</p>
+    <div class="steps" style="text-align:left;">
+      <div class="step"><div class="num">1</div><p class="stitle">Before we talk</p><p class="sdesc">You share a little about what's going on, what you've tried, and what "better" would look like. So we start session one already in the real conversation.</p></div>
+      <div class="step"><div class="num">2</div><p class="stitle">The session</p><p class="sdesc">We talk. Not therapy, not a pep talk, a direct conversation aimed at the root of what's stuck, not the surface you came in with.</p></div>
+      <div class="step"><div class="num">3</div><p class="stitle">After</p><p class="sdesc">You leave with something clear to sit with, and a 7-day window to reach out if a thought needs untangling before the next conversation.</p></div>
     </div>
-  </section>
+  </div></section>
 
-  <section class="band center">
-    <div class="wrap">
-      <h2>How it works</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <p class="stitle">Reach out</p>
-          <p class="sdesc">Send a short message about what you'd like to talk through.</p>
-        </div>
-        <div class="step">
-          <div class="num">2</div>
-          <p class="stitle">Pick a time</p>
-          <p class="sdesc">Sessions run 90 minutes, online 1-on-1.</p>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <p class="stitle">Talk it through</p>
-          <p class="sdesc">A calm, judgment-free conversation. Everything stays private.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="band center"><div class="wrap">
+    <h2>What you get</h2>
+    <ul class="feature-list">
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span class="ft">Direct, no-script conversation<span>Not a framework applied to you, a conversation built around you.</span></span></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 12.5l1.8 1.8 3.7-3.8"/></svg></span><span class="ft">A clear takeaway<span>You leave knowing what actually surfaced, not a blur.</span></span></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="ft">7-day follow-up window<span>Clarity support between sessions, not just during them.</span></span></li>
+    </ul>
+  </div></section>
 
-  <section class="band surface center">
-    <div class="wrap">
-      <h2>What people say</h2>
-      <div class="quotes">
-        <div class="quote">
-          <span class="mark">&ldquo;</span>
-          <p class="text">I came in carrying so much and left feeling lighter than I had in months. I felt genuinely heard, no judgment at all.</p>
-          <p class="who">After her first conversation</p>
-        </div>
-        <div class="quote">
-          <span class="mark">&ldquo;</span>
-          <p class="text">It's rare to feel this understood by someone. I left with a much clearer head and a sense of relief.</p>
-          <p class="who">After a 1:1 session</p>
-        </div>
-      </div>
+  <section class="band surface center"><div class="wrap">
+    <h2>Who this is for</h2>
+    <div class="fit-list">
+      <p>You're not confused about what's wrong, you're stuck on why you keep doing it anyway.</p>
+      <p>You've tried self-help content, books, maybe therapy, and you're still circling the same pattern.</p>
+      <p>You want someone who'll be honest with you, not just tell you what you want to hear.</p>
     </div>
-  </section>
+    <p class="fit-not">If you want someone to simply validate the plan you already have, this probably isn't the right fit, and that's okay.</p>
+  </div></section>
 
-  <section class="band center">
-    <div class="wrap">
-      <h2>Sessions &amp; pricing</h2>
-      <div class="prices prices-2">
-        <div class="price-card">
-          <p class="name">Single session</p>
-          <p class="price">&#8377;3,000</p>
-          <p class="note">One 90-min conversation, online.</p>
-        </div>
-        <div class="price-card featured">
-          <span class="badge">Best value</span>
-          <p class="name">3-session pack</p>
-          <p class="price">&#8377;7,500</p>
-          <p class="note">Three 90-min sessions. Save &#8377;1,500.</p>
-        </div>
-      </div>
+  <section class="band surface center"><div class="wrap">
+    <p class="eyebrow" style="color:var(--clay);">In their words</p>
+    <h2 style="margin-bottom:36px;">What people take away</h2>
+    <div class="quotes quotes-3">
+      <figure class="quote">
+        <span class="mark">&ldquo;</span>
+        <blockquote class="text">I came in carrying so much and left feeling lighter than I had in months. I felt genuinely heard, no judgment at all.</blockquote>
+        <figcaption class="who">
+          <span class="avatar">R</span>
+          <span>After her first conversation</span>
+        </figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="mark">&ldquo;</span>
+        <blockquote class="text">It's rare to feel this understood so quickly. I left with a much clearer head and a real sense of relief.</blockquote>
+        <figcaption class="who">
+          <span class="avatar">A</span>
+          <span>After a 1:1 session</span>
+        </figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="mark">&ldquo;</span>
+        <blockquote class="text">I'd been going in circles for months. One honest conversation and, for the first time, things actually made sense.</blockquote>
+        <figcaption class="who">
+          <span class="avatar">S</span>
+          <span>After a 1:1 session</span>
+        </figcaption>
+      </figure>
     </div>
-  </section>
+    <p class="review-note">Shared with permission. Names and details withheld to protect privacy.</p>
+  </div></section>
 
   <section class="cta-band">
     <h2>Ready to talk?</h2>
-    <p>Whatever's on your mind, there's room for it here.</p>
-    <p class="last">Send a quick message and we'll find a time that works. No pressure, no commitment beyond the session.</p>
-    <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20a%20clarity%20session.%20Could%20you%20share%20the%20available%20times%3F" class="btn" target="_blank" rel="noopener">Message on WhatsApp</a>
+    <p class="last">Start with a free discovery call, no charge, no commitment. We'll figure out what you're really working through, and if it's a fit, paid sessions begin from there.</p>
+    <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20a%20discovery%20call.%20Here%27s%20a%20bit%20about%20what%20I%27m%20working%20through%3A" class="btn" target="_blank" rel="noopener">Book a Discovery Call</a>
   </section>
 
   <footer class="footer">
-    <p>These sessions offer coaching and conversational support. They are not psychotherapy, counselling, medical, or mental-health treatment, and are not a substitute for care from a licensed professional. If you are in crisis or need clinical help, please reach out to a qualified mental-health professional or a helpline.</p>
+    <p class="disc">These sessions offer coaching and conversational support. They are not psychotherapy, counselling, medical, or mental-health treatment, and are not a substitute for care from a licensed professional. If you are in crisis or need clinical help, please reach out to a qualified mental-health professional or a helpline.</p>
+    <p class="flinks"><a href="index.html">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="pricing.html">Pricing</a> &middot; <a href="contact.html">Contact</a></p>
   </footer>
-
 </body>
 </html>
