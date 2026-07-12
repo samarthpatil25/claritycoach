@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clarity for life's hard conversations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+        --bg-page: #f0f1f3;
+    --bg-card: #ffffff;
+    --bg-surface: #e4e7ec;
+    --bg-blue: #dfe3ea;
+    --blue: #3a4f66;
+    --blue-deep: #1f3042;
+    --clay: #c2925a;
+    --text-primary: #17212e;
+    --text-secondary: #55606e;
+    --text-tertiary: #8b94a0;
+    --border: rgba(25,35,50,0.14);
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--bg-page); color: var(--text-primary); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  .wrap-narrow { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  h1 { font-family: var(--serif); font-weight: 400; line-height: 1.12; letter-spacing: -0.015em; font-size: 44px; }
+  h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; font-size: 28px; }
+  h3 { font-family: var(--serif); font-weight: 400; font-size: 21px; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 50; background: rgba(247,245,240,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 1000px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-family: var(--serif); font-size: 19px; color: var(--text-primary); text-decoration: none; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-size: 15px; color: var(--text-secondary); text-decoration: none; transition: color .15s; }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-links a.active { color: var(--text-primary); font-weight: 500; }
+  .nav-cta { background: var(--blue-deep); color: #fdfbf7 !important; padding: 9px 20px; border-radius: 100px; font-size: 14px; }
+  .nav-cta:hover { background: #152230; }
+  .menu-btn { display: none; background: none; border: none; font-size: 24px; color: var(--text-primary); cursor: pointer; line-height: 1; }
+
+  .btn { display: inline-block; background: var(--blue-deep); color: #fdfbf7; padding: 15px 36px; border-radius: 100px; font-size: 16px; font-weight: 500; text-decoration: none; transition: background .2s; }
+  .btn:hover { background: #152230; }
+  .btn-ghost { background: transparent; color: var(--blue-deep); border: 1.5px solid var(--blue); }
+  .btn-ghost:hover { background: var(--bg-blue); }
+
+  .hero { background: var(--bg-blue); text-align: center; padding: 5.5rem 24px 5rem; }
+  .eyebrow { font-size: 12px; color: var(--blue-deep); margin-bottom: 20px; letter-spacing: 1.8px; text-transform: uppercase; font-weight: 500; }
+  .hero h1 { margin: 0 auto 20px; max-width: 640px; }
+  .hero .sub { font-size: 19px; color: var(--text-secondary); margin: 0 auto 32px; max-width: 480px; }
+  .page-head { background: var(--bg-blue); text-align: center; padding: 4rem 24px 3.5rem; }
+  .page-head h1 { font-size: 38px; margin-bottom: 12px; }
+  .page-head p { font-size: 17px; color: var(--text-secondary); max-width: 520px; margin: 0 auto; }
+
+  .band { padding: 4.5rem 0; }
+  .band.surface { background: var(--bg-surface); }
+  .band h2 { margin-bottom: 18px; }
+  .band .lead { font-size: 18px; color: var(--text-secondary); line-height: 1.8; max-width: 640px; }
+  .band.center { text-align: center; }
+  .band.center .lead { margin: 0 auto; }
+  .band.center h2 { margin-bottom: 36px; }
+
+  .grid3 { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); margin-top: 8px; }
+  .card-soft { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 26px; text-align: left; }
+  .card-soft .icon { width: 44px; height: 44px; border-radius: 50%; background: var(--bg-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--blue-deep); }
+  .card-soft .icon svg { width: 22px; height: 22px; }
+  .card-soft .title { font-size: 17px; font-weight: 500; margin-bottom: 6px; }
+  .card-soft .desc { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 8px; }
+  .step { text-align: left; }
+  .step .num { width: 38px; height: 38px; border-radius: 50%; background: var(--blue); color: #fdfbf7; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 500; font-family: var(--serif); margin-bottom: 14px; }
+  .step .stitle { font-size: 17px; font-weight: 500; margin-bottom: 5px; }
+  .step .sdesc { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
+
+  .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 8px; text-align: left; }
+  .quote { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 28px 30px; }
+  .quote .mark { font-family: var(--serif); font-size: 50px; line-height: 1; color: var(--clay); display: block; height: 26px; margin-bottom: 6px; }
+  .quote p.text { font-family: var(--serif); font-size: 19px; line-height: 1.5; margin-bottom: 14px; color: var(--text-primary); font-style: italic; }
+  .quote .who { font-size: 13px; color: var(--text-tertiary); letter-spacing: 0.3px; }
+
+  .prices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 8px; text-align: left; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .price-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 30px; }
+  .price-card.featured { border: 1.5px solid var(--blue); background: var(--bg-blue); }
+  .price-card .badge { display: inline-block; background: var(--clay); color: #fdfbf7; font-size: 11px; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; letter-spacing: 0.5px; }
+  .price-card .name { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+  .price-card .price { font-family: var(--serif); font-size: 32px; font-weight: 400; margin-bottom: 10px; }
+  .price-card .note { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+  .cta-band { background: var(--bg-blue); text-align: center; padding: 5rem 24px; }
+  .cta-band h2 { margin-bottom: 14px; }
+  .cta-band p { font-size: 17px; color: var(--text-secondary); line-height: 1.65; margin: 0 auto 6px; max-width: 480px; }
+  .cta-band p.last { margin-bottom: 28px; }
+
+  .prose { max-width: 680px; margin: 0 auto; }
+  .prose p { font-size: 17px; color: var(--text-secondary); line-height: 1.85; margin-bottom: 20px; }
+  .prose p strong { color: var(--text-primary); font-weight: 500; }
+
+  .footer { padding: 2.5rem 24px; text-align: center; border-top: 1px solid var(--border); }
+  .footer .disc { font-size: 12.5px; color: var(--text-tertiary); line-height: 1.7; max-width: 640px; margin: 0 auto 14px; }
+  .footer .flinks { font-size: 14px; color: var(--text-secondary); }
+  .footer .flinks a { color: var(--text-secondary); text-decoration: none; margin: 0 10px; }
+  .footer .flinks a:hover { color: var(--text-primary); }
+
+  @media (max-width: 720px) {
+    h1 { font-size: 32px; } h2 { font-size: 23px; }
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-page); flex-direction: column; gap: 0; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 24px; width: 100%; }
+    .nav-links a.nav-cta { margin: 8px 24px; text-align: center; }
+    .menu-btn { display: block; }
+    .hero { padding: 4rem 22px 3.5rem; } .hero .sub { font-size: 17px; }
+    .band { padding: 3.25rem 0; }
+    .grid3, .steps, .quotes, .prices { grid-template-columns: 1fr; gap: 14px; }
+    .cta-band { padding: 3.75rem 22px; }
+  }
+
+  .note-box { max-width: 640px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--clay); border-radius: var(--radius-md); padding: 32px 34px; text-align: left; }
+  .note-box p { font-size: 18px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 16px; }
+  .note-box p:last-child { margin-bottom: 0; }
+  .note-box p strong { color: var(--text-primary); font-weight: 500; }
+  .feature-list { max-width: 640px; margin: 8px auto 0; text-align: left; list-style: none; }
+  .feature-list li { display: flex; gap: 14px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .feature-list li:last-child { border-bottom: none; }
+  .feature-list .ic { color: var(--blue-deep); flex-shrink: 0; margin-top: 2px; }
+  .feature-list .ic svg { width: 20px; height: 20px; }
+  .feature-list .ft { font-size: 16px; color: var(--text-primary); }
+  .feature-list .ft span { display: block; font-size: 14px; color: var(--text-secondary); margin-top: 3px; }
+  .fit-list { max-width: 640px; margin: 0 auto; text-align: left; }
+  .fit-list p { font-size: 17px; color: var(--text-secondary); line-height: 1.7; padding: 12px 0 12px 30px; position: relative; }
+  .fit-list p::before { content: "\2014"; position: absolute; left: 0; color: var(--clay); }
+  .fit-not { max-width: 640px; margin: 24px auto 0; font-size: 16px; color: var(--text-tertiary); font-style: italic; text-align: left; }
+  .faq { max-width: 680px; margin: 0 auto; text-align: left; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+  .faq-item:first-child { border-top: 1px solid var(--border); }
+  .faq-q { font-family: var(--serif); font-size: 19px; color: var(--text-primary); margin-bottom: 8px; }
+  .faq-a { font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
+</style>
+</head>
+<body>  <nav class="nav"><div class="nav-inner">
+    <a href="index.html" class="brand">Moreway</a>
+    <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')">&#9776;</button>
+    <div class="nav-links" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20a%20discovery%20call.%20Here%27s%20a%20bit%20about%20what%20I%27m%20working%20through%3A" class="nav-cta" target="_blank" rel="noopener">Book a Discovery Call</a>
+    </div>
+  </div></nav>
+
+  <section class="page-head">
+    <h1>About</h1>
+    <p>Why this works differently, and what to expect from me.</p>
+  </section>
+
+  <section class="band"><div class="prose">
+    <p>I spend my time paying attention to <strong>how people talk themselves in circles</strong>, through the content they consume, the conversations they replay, the stories they repeat until they believe them.</p>
+    <p>Most of us are surprisingly good at solving the wrong problem. We fix the symptom, feel better for a week, and then find ourselves right back where we started, because the thing underneath was never actually named.</p>
+    <p>These conversations are where that changes. One-on-one, online, and completely confidential, applied to your actual life instead of a script. I'll listen closely, ask the questions that matter, and be honest with you about what I'm hearing, even when it's the uncomfortable version.</p>
+    <p>And if something you're facing would be better served by a professional, I'll say so, and help point you toward the right kind of support.</p>
+  </div></section>
+
+  <section class="cta-band">
+    <h2>Want to talk?</h2>
+    <p class="last">Start with a free discovery call. No charge, no pressure, no commitment beyond the conversation.</p>
+    <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20a%20discovery%20call.%20Here%27s%20a%20bit%20about%20what%20I%27m%20working%20through%3A" class="btn" target="_blank" rel="noopener">Book a Discovery Call</a>
+  </section>
+
+  <footer class="footer">
+    <p class="disc">These sessions offer coaching and conversational support. They are not psychotherapy, counselling, medical, or mental-health treatment, and are not a substitute for care from a licensed professional. If you are in crisis or need clinical help, please reach out to a qualified mental-health professional or a helpline.</p>
+    <p class="flinks"><a href="index.html">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="pricing.html">Pricing</a> &middot; <a href="contact.html">Contact</a></p>
+  </footer>
+</body>
+</html>
