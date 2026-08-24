@@ -216,6 +216,12 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
 .shot .who { font-size: 12.5px; color: var(--text-tertiary); letter-spacing: 0.3px; }
 .shot.extra { display: none; }
 .shots.expanded .shot.extra { display: block; }
+.dont-believe {
+  font-family: var(--serif); font-size: clamp(20px, 2.4vw, 25px);
+  line-height: 1.45; color: var(--text-primary);
+  max-width: 560px; margin: 44px auto 0; text-align: center;
+}
+.dont-believe em { color: var(--accent-bright); font-style: normal; }
 .show-more {
   display: inline-block; margin-top: 28px; background: none;
   border: 1px solid var(--border); color: var(--text-secondary);
@@ -375,70 +381,71 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
     <div class="shots" id="shots">
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-1.png" alt="[Paste the key line from screenshot 1 here]" loading="lazy">
+          <img src="reviews/review-1.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-1.png';}" alt="[Feeling much lighter]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 1 here]&rdquo;</p>
+          <p class="pull">&ldquo;Feeling much lighter&rdquo;</p>
           <p class="who">After the first conversation</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-2.png" alt="[Paste the key line from screenshot 2 here]" loading="lazy">
+          <img src="reviews/review-2.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-2.png';}" alt="[Made a huge difference for me]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 2 here]&rdquo;</p>
+          <p class="pull">&ldquo;Made a huge difference for me&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-3.png" alt="[Paste the key line from screenshot 3 here]" loading="lazy">
+          <img src="reviews/review-3.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-3.png';}" alt="[I came out with so much clarity]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 3 here]&rdquo;</p>
+          <p class="pull">&ldquo;I came out with so much clarity&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-4.png" alt="[Paste the key line from screenshot 4 here]" loading="lazy">
+          <img src="reviews/review-4.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-4.png';}" alt="[Made me think about things I had never really questioned before]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 4 here]&rdquo;</p>
+          <p class="pull">&ldquo;Made me think about things I had never really questioned before&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot extra">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-5.png" alt="[Paste the key line from screenshot 5 here]" loading="lazy">
+          <img src="reviews/review-5.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-5.png';}" alt="[Had some clarity instead of 100 different thoughts]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 5 here]&rdquo;</p>
+          <p class="pull">&ldquo;Had some clarity instead of 100 different thoughts &rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot extra">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-6.png" alt="[Paste the key line from screenshot 6 here]" loading="lazy">
+          <img src="reviews/review-6.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-6.png';}" alt="[Definitely worth talking to you!]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 6 here]&rdquo;</p>
+          <p class="pull">&ldquo;Definitely worth talking to you!&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot extra">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-7.png" alt="[Paste the key line from screenshot 7 here]" loading="lazy">
+          <img src="reviews/review-7.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-7.png';}" alt="[You did'nt give me some random motivational talk]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 7 here]&rdquo;</p>
+          <p class="pull">&ldquo;You did'nt give me some random motivational talk..Came out feeling much clearer&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
     </div>
     <button type="button" class="show-more" id="moreBtn" onclick="toggleShots()">Show more</button>
     <p class="review-note">Real messages, shared with permission.</p>
+    <p class="dont-believe">Don't believe a word of it until you've had the conversation <em>yourself</em>.</p>
   </div></section>
 
   <section class="band alt center"><div class="wrap">
