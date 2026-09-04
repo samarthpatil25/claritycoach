@@ -310,6 +310,9 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
 .footer .flinks { font-size: 14px; color: var(--text-secondary); }
 .footer .flinks a { color: var(--text-secondary); text-decoration: none; margin: 0 10px; }
 .footer .flinks a:hover { color: var(--accent-bright); }
+.footer .fmini { font-size: 12.5px; margin-top: 14px; }
+.footer .fmini a { color: var(--text-tertiary); text-decoration: none; }
+.footer .fmini a:hover { color: var(--text-secondary); }
 
 
 @media (max-width: 720px) {
@@ -329,8 +332,26 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
   .cta-band { padding: 4rem 22px; }
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1378745693859812');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
+<!-- Meta Pixel (no-JS fallback) -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1378745693859812&amp;ev=PageView&amp;noscript=1"
+alt="" /></noscript>
   <nav class="nav"><div class="nav-inner">
     <a href="index.html" class="brand">Moreway</a>
     <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu" aria-expanded="false">&#9776;</button>
@@ -340,7 +361,7 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
       <a href="#reviews">Reviews</a>
       <a href="sessions.html">Sessions</a>
       <a href="contact.html">Contact</a>
-      <a href="https://forms.gle/HVAQv1WVfi3y34We9" class="nav-cta" target="_blank" rel="noopener">Book a Discovery Call</a>
+      <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20the%20free%20discovery%20call." class="nav-cta" target="_blank" rel="noopener">Book a Discovery Call</a>
     </div>
   </div></nav>
 
@@ -349,11 +370,10 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
     <h1>You already know what's wrong. You just haven't said it out loud to someone who'll actually tell you the truth.</h1>
     <p class="sub">One-on-one conversations for people who are done circling the same problem.</p>
     <div class="actions">
-      <a href="https://forms.gle/HVAQv1WVfi3y34We9" class="btn" target="_blank" rel="noopener">Request Your Free Discovery Call</a>
+      <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20the%20free%20discovery%20call." class="btn" target="_blank" rel="noopener">Message on WhatsApp</a>
       <a href="about.html" class="btn btn-ghost">See how it works</a>
     </div>
     <p class="free-line">The first conversation is free.</p>
-    <p class="alt-contact">Prefer to ask something first? <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20had%20a%20question%20before%20I%20fill%20in%20the%20form%3A" target="_blank" rel="noopener">Message on WhatsApp</a>.</p>
   </section>
 
   <section class="band center"><div class="wrap-narrow">
@@ -381,64 +401,64 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
     <div class="shots" id="shots">
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-1.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-1.png';}" alt="[Feeling much lighter]" loading="lazy">
+          <img src="reviews/review-1.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-1.png';}" alt="[Paste the key line from screenshot 1 here]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;Feeling much lighter&rdquo;</p>
+          <p class="pull">&ldquo;[Paste the key line from screenshot 1 here]&rdquo;</p>
           <p class="who">After the first conversation</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-2.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-2.png';}" alt="[Made a huge difference for me]" loading="lazy">
+          <img src="reviews/review-2.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-2.png';}" alt="[Paste the key line from screenshot 2 here]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;Made a huge difference for me&rdquo;</p>
+          <p class="pull">&ldquo;[Paste the key line from screenshot 2 here]&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-3.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-3.png';}" alt="[I came out with so much clarity]" loading="lazy">
+          <img src="reviews/review-3.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-3.png';}" alt="[Paste the key line from screenshot 3 here]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;I came out with so much clarity&rdquo;</p>
+          <p class="pull">&ldquo;[Paste the key line from screenshot 3 here]&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-4.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-4.png';}" alt="[Made me think about things I had never really questioned before]" loading="lazy">
+          <img src="reviews/review-4.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-4.png';}" alt="[Paste the key line from screenshot 4 here]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;Made me think about things I had never really questioned before&rdquo;</p>
+          <p class="pull">&ldquo;[Paste the key line from screenshot 4 here]&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot extra">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-5.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-5.png';}" alt="[Had some clarity instead of 100 different thoughts]" loading="lazy">
+          <img src="reviews/review-5.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-5.png';}" alt="[Paste the key line from screenshot 5 here]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;Had some clarity instead of 100 different thoughts &rdquo;</p>
+          <p class="pull">&ldquo;[Paste the key line from screenshot 5 here]&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot extra">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-6.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-6.png';}" alt="[Definitely worth talking to you!]" loading="lazy">
+          <img src="reviews/review-6.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-6.png';}" alt="[Paste the key line from screenshot 6 here]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;Definitely worth talking to you!&rdquo;</p>
+          <p class="pull">&ldquo;[Paste the key line from screenshot 6 here]&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot extra">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-7.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-7.png';}" alt="[You did'nt give me some random motivational talk]" loading="lazy">
+          <img src="reviews/review-7.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-7.png';}" alt="[Paste the key line from screenshot 7 here]" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;You did'nt give me some random motivational talk..Came out feeling much clearer&rdquo;</p>
+          <p class="pull">&ldquo;[Paste the key line from screenshot 7 here]&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
@@ -453,7 +473,7 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
       <span class="badge-free">Free discovery call</span>
       <h2>Start with a free conversation</h2>
       <p class="fc-sub">A first conversation to understand what's actually going on and whether this is the right fit for you. No charge, no pressure, no commitment.</p>
-      <a href="https://forms.gle/HVAQv1WVfi3y34We9" class="btn" target="_blank" rel="noopener">Request Your Free Discovery Call</a>
+      <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20the%20free%20discovery%20call." class="btn" target="_blank" rel="noopener">Message on WhatsApp</a>
       <p class="fc-note">The call runs about 30 minutes. Paid sessions only begin if you choose to continue, and session pricing is shown on the booking page before you confirm anything.</p>
     </div>
   </div></section>
@@ -461,13 +481,13 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
   <section class="cta-band">
     <h2>Ready to talk?</h2>
     <p class="last">Start with a free discovery call. No charge, no commitment. We'll get clear on what you're actually working through, and if it's a fit, paid sessions begin from there.</p>
-    <a href="https://forms.gle/HVAQv1WVfi3y34We9" class="btn" target="_blank" rel="noopener">Request Your Free Discovery Call</a>
-    <p class="alt-contact">Prefer to ask something first? <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20had%20a%20question%20before%20I%20fill%20in%20the%20form%3A" target="_blank" rel="noopener">Message on WhatsApp</a>.</p>
+    <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20the%20free%20discovery%20call." class="btn" target="_blank" rel="noopener">Message on WhatsApp</a>
   </section>
 
   <footer class="footer">
     <p class="disc">These sessions offer coaching and conversational support. They are not psychotherapy, counselling, medical, or mental-health treatment, and are not a substitute for care from a licensed professional. If you are in crisis or need clinical help, please reach out to a qualified mental-health professional or a helpline.</p>
     <p class="flinks"><a href="index.html">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="#reviews">Reviews</a> &middot; <a href="sessions.html">Sessions</a> &middot; <a href="contact.html">Contact</a></p>
+    <p class="fmini"><a href="privacy.html">Privacy</a></p>
   </footer>
   <div class="lightbox" id="lightbox" onclick="closeShot(event)">
     <button type="button" class="lb-close" onclick="closeShot(event)" aria-label="Close">&times;</button>
@@ -550,6 +570,24 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
       ['click', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) {
         window.addEventListener(ev, close, { once: true, passive: true });
       });
+    })();
+  </script>
+  <script>
+    // Fire a Lead event when someone opens WhatsApp or the intake form.
+    (function () {
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        if (href.indexOf('wa.me') === -1 && href.indexOf('forms.gle') === -1) return;
+        if (a.dataset.leadSent) return;          // one Lead per link per pageview
+        a.dataset.leadSent = '1';
+        if (typeof fbq !== 'function') return;
+        fbq('track', 'Lead', {
+          content_name: 'Discovery call request',
+          content_category: href.indexOf('wa.me') > -1 ? 'whatsapp' : 'form'
+        });
+      }, true);
     })();
   </script>
 </body>

@@ -270,6 +270,9 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
 .footer .flinks { font-size: 14px; color: var(--text-secondary); }
 .footer .flinks a { color: var(--text-secondary); text-decoration: none; margin: 0 10px; }
 .footer .flinks a:hover { color: var(--accent-bright); }
+.footer .fmini { font-size: 12.5px; margin-top: 14px; }
+.footer .fmini a { color: var(--text-tertiary); text-decoration: none; }
+.footer .fmini a:hover { color: var(--text-secondary); }
 
 @media (max-width: 1000px) and (min-width: 721px) {
   .quotes { grid-template-columns: repeat(2, 1fr); }
@@ -293,8 +296,26 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
   .cta-band { padding: 4rem 22px; }
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1378745693859812');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
+<!-- Meta Pixel (no-JS fallback) -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1378745693859812&amp;ev=PageView&amp;noscript=1"
+alt="" /></noscript>
   <nav class="nav"><div class="nav-inner">
     <a href="index.html" class="brand">Moreway</a>
     <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu" aria-expanded="false">&#9776;</button>
@@ -304,7 +325,7 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
       <a href="index.html#reviews">Reviews</a>
       <a href="sessions.html" class="active">Sessions</a>
       <a href="contact.html">Contact</a>
-      <a href="https://forms.gle/HVAQv1WVfi3y34We9" class="nav-cta" target="_blank" rel="noopener">Book a Discovery Call</a>
+      <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20the%20free%20discovery%20call." class="nav-cta" target="_blank" rel="noopener">Book a Discovery Call</a>
     </div>
   </div></nav>
 
@@ -318,7 +339,7 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
       <span class="badge-free">Free discovery call</span>
       <h2>Your first conversation is free</h2>
       <p class="fc-sub">A first conversation to understand what's going on and whether this is the right fit. There's no charge and no commitment.</p>
-      <a href="https://forms.gle/HVAQv1WVfi3y34We9" class="btn" target="_blank" rel="noopener">Request Your Free Discovery Call</a>
+      <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20the%20free%20discovery%20call." class="btn" target="_blank" rel="noopener">Message on WhatsApp</a>
       <p class="fc-note">The call runs about 30 minutes. Paid sessions only begin if you choose to continue, and session pricing is shown on the booking page before you confirm anything.</p>
     </div>
   </div></section>
@@ -344,13 +365,13 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
   <section class="cta-band">
     <h2>Ready to begin?</h2>
     <p class="last">Book your free discovery call, or just message and ask anything first.</p>
-    <a href="https://forms.gle/HVAQv1WVfi3y34We9" class="btn" target="_blank" rel="noopener">Request Your Free Discovery Call</a>
-    <p class="alt-contact">Prefer to ask something first? <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20had%20a%20question%20before%20I%20fill%20in%20the%20form%3A" target="_blank" rel="noopener">Message on WhatsApp</a>.</p>
+    <a href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%20came%20across%20your%20page%20and%20I%27d%20like%20to%20book%20the%20free%20discovery%20call." class="btn" target="_blank" rel="noopener">Message on WhatsApp</a>
   </section>
 
   <footer class="footer">
     <p class="disc">These sessions offer coaching and conversational support. They are not psychotherapy, counselling, medical, or mental-health treatment, and are not a substitute for care from a licensed professional. If you are in crisis or need clinical help, please reach out to a qualified mental-health professional or a helpline.</p>
     <p class="flinks"><a href="index.html">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="index.html#reviews">Reviews</a> &middot; <a href="sessions.html">Sessions</a> &middot; <a href="contact.html">Contact</a></p>
+    <p class="fmini"><a href="privacy.html">Privacy</a></p>
   </footer>
   <script>
     (function () {
@@ -392,6 +413,24 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
       ['click', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) {
         window.addEventListener(ev, close, { once: true, passive: true });
       });
+    })();
+  </script>
+  <script>
+    // Fire a Lead event when someone opens WhatsApp or the intake form.
+    (function () {
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        if (href.indexOf('wa.me') === -1 && href.indexOf('forms.gle') === -1) return;
+        if (a.dataset.leadSent) return;          // one Lead per link per pageview
+        a.dataset.leadSent = '1';
+        if (typeof fbq !== 'function') return;
+        fbq('track', 'Lead', {
+          content_name: 'Discovery call request',
+          content_category: href.indexOf('wa.me') > -1 ? 'whatsapp' : 'form'
+        });
+      }, true);
     })();
   </script>
 </body>
