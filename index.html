@@ -293,12 +293,12 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
 .cta-band p.last { margin-bottom: 30px; }
 
 /* PROSE */
-.prose { max-width: 680px; margin: 0 auto; }
+.prose { max-width: 680px; margin: 0 auto; padding: 0 24px; }
 .prose p { font-size: 17px; color: var(--text-secondary); line-height: 1.85; margin-bottom: 20px; }
 .prose p strong { color: var(--text-primary); font-weight: 600; }
 
 /* FAQ */
-.faq { max-width: 680px; margin: 0 auto; text-align: left; }
+.faq { max-width: 680px; margin: 0 auto; padding: 0 24px; text-align: left; }
 .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
 .faq-item:first-child { border-top: 1px solid var(--border); }
 .faq-q { font-family: var(--serif); font-size: 19px; color: var(--text-primary); margin-bottom: 8px; font-weight: 500; }
@@ -330,6 +330,8 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
   .band { padding: 3.5rem 0; }
   .steps { grid-template-columns: 1fr; gap: 16px; }
   .cta-band { padding: 4rem 22px; }
+  .wrap, .wrap-narrow, .prose, .faq { padding-left: 26px; padding-right: 26px; }
+  .page-head { padding-left: 26px; padding-right: 26px; }
 }
 </style>
 <!-- Meta Pixel Code -->
@@ -396,69 +398,68 @@ alt="" /></noscript>
   </div></section>
 
   <section class="band center" id="reviews"><div class="wrap">
-    <p class="eyebrow">In their words</p>
     <h2 style="margin-bottom:36px;">In their own words</h2>
     <div class="shots" id="shots">
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-1.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-1.png';}" alt="[Paste the key line from screenshot 1 here]" loading="lazy">
+          <img src="reviews/review-1.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-1.png';}" alt="Feeling much lighter" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 1 here]&rdquo;</p>
+          <p class="pull">&ldquo;Feeling much lighter&rdquo;</p>
           <p class="who">After the first conversation</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-2.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-2.png';}" alt="[Paste the key line from screenshot 2 here]" loading="lazy">
+          <img src="reviews/review-2.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-2.png';}" alt="Helped me understand my emotions" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 2 here]&rdquo;</p>
+          <p class="pull">&ldquo;Helped me understand my emotions&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-3.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-3.png';}" alt="[Paste the key line from screenshot 3 here]" loading="lazy">
+          <img src="reviews/review-3.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-3.png';}" alt="One of those things when you realise money was actually an investment on myself" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 3 here]&rdquo;</p>
+          <p class="pull">&ldquo;One of those things when you realise money was actually an investment on myself&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-4.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-4.png';}" alt="[Paste the key line from screenshot 4 here]" loading="lazy">
+          <img src="reviews/review-4.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-4.png';}" alt="Never felt judged at all" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 4 here]&rdquo;</p>
+          <p class="pull">&ldquo;Never felt judged at all&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot extra">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-5.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-5.png';}" alt="[Paste the key line from screenshot 5 here]" loading="lazy">
+          <img src="reviews/review-5.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-5.png';}" alt="Finally felt like I had some clarity" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 5 here]&rdquo;</p>
+          <p class="pull">&ldquo;Finally felt like I had some clarity&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot extra">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-6.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-6.png';}" alt="[Paste the key line from screenshot 6 here]" loading="lazy">
+          <img src="reviews/review-6.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-6.png';}" alt="Made me see things differently" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 6 here]&rdquo;</p>
+          <p class="pull">&ldquo;Made me see things differently&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
       <figure class="shot extra">
         <button type="button" onclick="openShot(this)" aria-label="Enlarge this message">
-          <img src="reviews/review-7.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-7.png';}" alt="[Paste the key line from screenshot 7 here]" loading="lazy">
+          <img src="reviews/review-7.jpg" onerror="if(!this.dataset.alt){this.dataset.alt=1;this.src='reviews/review-7.png';}" alt="You actually helped me" loading="lazy">
         </button>
         <figcaption>
-          <p class="pull">&ldquo;[Paste the key line from screenshot 7 here]&rdquo;</p>
+          <p class="pull">&ldquo;You actually helped me&rdquo;</p>
           <p class="who">After a 1:1 session</p>
         </figcaption>
       </figure>
