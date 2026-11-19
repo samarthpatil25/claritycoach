@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're booked · Decode Call · Moreway</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1378745693859812');
+fbq('track','PageView');
+(function(){var k='mw_purchase_'+(new URLSearchParams(location.search).get('razorpay_payment_id')||'x');var done=false;try{done=localStorage.getItem(k)==='1'}catch(e){}
+if(!done){fbq('track','Purchase',{value:299,currency:'INR',content_name:'Decode Call'});try{localStorage.setItem(k,'1')}catch(e){}}})();
+</script>
+<style>
+:root{--bg:#121216;--ink:#F3EDE4;--muted:#A8A198;--amber:#F5B04F;--o1:#FF7A45;--o2:#FFB75E}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;display:grid;place-items:center;background:radial-gradient(70% 60% at 50% 0%,rgb(110 62 34/.45),transparent 70%),var(--bg);color:var(--ink);font:16px/1.7 Inter,system-ui,sans-serif;padding:48px 24px;text-align:center}
+.card{max-width:560px}
+.tick{width:72px;height:72px;margin:0 auto 32px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--o1),var(--o2));box-shadow:0 14px 40px -10px rgb(255 122 69/.7)}
+.tick svg{width:34px;height:34px;stroke:#1B1009;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+h1{font:600 clamp(30px,5vw,42px)/1.15 Fraunces,Georgia,serif;margin-bottom:20px}
+p{color:var(--muted);margin-bottom:16px}
+.steps{text-align:left;margin:36px auto;max-width:440px;display:grid;gap:14px}
+.steps div{display:flex;gap:14px;padding:18px 20px;border-radius:16px;background:rgb(255 255 255/.03);border:1px solid rgb(255 255 255/.07)}
+.steps b{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:14px;color:#1B1009;background:linear-gradient(135deg,var(--o1),var(--o2))}
+.steps span{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 30px;border-radius:999px;background:linear-gradient(110deg,var(--o1),var(--o2));color:#1B1009;font-weight:600;text-decoration:none;box-shadow:0 14px 34px -10px rgb(255 122 69/.65)}
+.small{font-size:13px;margin-top:28px}
+.small a{color:var(--amber)}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+  <h1>You're booked. Your Decode Call is confirmed.</h1>
+  <p>Your payment went through. One last step and we're set.</p>
+  <div class="steps">
+    <div><b>1</b><span>Message me on WhatsApp so we can fix your time.</span></div>
+    <div><b>2</b><span>Fill in the short form I send you. It takes about 3 minutes.</span></div>
+    <div><b>3</b><span>Join your call. Under 25 minutes, just you and me.</span></div>
+  </div>
+  <a class="btn" id="wa" href="https://wa.me/917665960969?text=Hi%20Tanishq%2C%20I%27ve%20just%20booked%20my%20Decode%20Call.%20Let%27s%20fix%20a%20time." target="_blank" rel="noopener">Choose my time on WhatsApp →</a>
+  <p class="small">Your Exact-Loop Promise and refund rules are in the <a href="/refund.html">refund policy</a>.</p>
+</main>
+<script>
+(function(){var id=new URLSearchParams(location.search).get('razorpay_payment_id');if(id){var a=document.getElementById('wa');a.href=a.href.replace('time.','time.%20Payment%20ID%3A%20'+encodeURIComponent(id))}})();
+</script>
+</body>
+</html>
